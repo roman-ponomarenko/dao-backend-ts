@@ -17,7 +17,7 @@ export const errorHandler = (
     });
 };
 
-export const logHandler = (
+export const requestLogHandler = (
     req: Request,
     res: Response,
     next: NextFunction
