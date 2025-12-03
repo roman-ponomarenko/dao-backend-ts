@@ -7,4 +7,8 @@ export const config = cleanEnv(process.env, {
     PORT: num(),
     RPC_URL: url(),
     DAO_ADDRESS: str(),
+    START_BLOCK: num(),
+    CRON_SCHEDULE: str(),
+    BATCH_SIZE: num(),
+    LOG_LEVEL: str(),
 });

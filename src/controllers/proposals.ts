@@ -1,5 +1,5 @@
 import {Request, Response, NextFunction} from 'express';
-import {storage, Proposal} from '../models/storage'
+import {storage, Proposal} from '../models/storage';
 
 export const getProposals = (req: Request, res: Response, next: NextFunction) => {
     try {
@@ -17,7 +17,7 @@ export const getProposals = (req: Request, res: Response, next: NextFunction) =>
 
 export const getProposalById = (req: Request, res: Response, next: NextFunction) => {
     try {
-        const proposal = storage.proposals.get(parseInt(req.params.id));
+        const proposal = storage.proposals.get(req.params.id);
         if (!proposal) {
             return res.status(404).json({error: 'Proposal not found'});
         }
@@ -32,7 +32,7 @@ export const getProposalById = (req: Request, res: Response, next: NextFunction)
 
 export const getProposalVotes = (req: Request, res: Response, next: NextFunction) => {
     try {
-        const proposal = storage.proposals.get(parseInt(req.params.id));
+        const proposal = storage.proposals.get(req.params.id);
         if (!proposal) {
             return res.status(404).json({error: 'Proposal not found'});
         }
