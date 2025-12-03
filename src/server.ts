@@ -3,7 +3,7 @@ import {logger} from "./logger";
 import {config} from "./config/config";
 import * as cron from 'node-cron'
 import {ScheduledTask} from "node-cron/dist/cjs/tasks/scheduled-task";
-import {loadHistoricalEvents, poolForEvents} from "./indexer"
+import {loadHistoricalEvents, poolForEvents} from "./events/index"
 
 let scheduledPollingTask: ScheduledTask | null = null;
 

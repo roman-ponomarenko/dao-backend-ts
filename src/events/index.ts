@@ -1,8 +1,8 @@
-import {logger} from "./logger";
-import {config} from "./config/config";
+import {logger} from "../logger";
+import {config} from "../config/config";
 import {ethers} from "ethers";
-import daoAbi from "./abis/DAO.json";
-import {Proposal, storage, Vote} from "./models/storage";
+import daoAbi from "../abis/DAO.json";
+import {Proposal, storage, Vote} from "../models/storage";
 
 const provider = new ethers.JsonRpcProvider(config.RPC_URL);
 const daoContract = new ethers.Contract(config.DAO_ADDRESS, daoAbi, provider);
